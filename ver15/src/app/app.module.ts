@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { MaskPipe } from './pipe/mask.pipe';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
-  declarations: [AppComponent, UserComponent, MaskPipe],
+  declarations: [AppComponent, UserComponent, MaskPipe, BookComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
