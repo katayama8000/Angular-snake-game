@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './user.service';
+import { AliasService } from './alias.service';
 
 @Component({
   selector: 'app-user',
@@ -9,10 +10,14 @@ import { UserService } from './user.service';
   providers: [
     {
       provide: UserService,
-      //useClass: UserService, //useClass
-      useValue: new UserService(), //useValue
+      useClass: UserService, //useClass
+      //useValue: new UserService(), //useValue
       multi: false,
     },
+    // {
+    //   provide: AliasService,
+    //   useExisting: UserService, //useExisting
+    // },
   ],
 })
 export class UserComponent {
