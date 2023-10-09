@@ -17,7 +17,7 @@ localhost:8088/hello
 
 ### 使用中ポートの調べ方
 ```bash
-sudo lsof -P -i:8088
+sudo lsof -P -i:3000
 ```
 
 ### ポートの開け方
