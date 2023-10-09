@@ -23,6 +23,7 @@ async fn main() -> Result<()> {
     let routers_all = Router::new()
         .merge(routes_health_check())
         .merge(web::routes_login::routes())
+        .route_layer(middleware::from_fn(web::mw_auth::mw_requier_auth))
         .layer(CookieManagerLayer::new())
         .fallback_service(route_static());
     let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
